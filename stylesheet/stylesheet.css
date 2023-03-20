@@ -1,3 +1,9 @@
 html{
-    background-color: blue;
+    background-color:wheat;
+}
+.squareList {
+    list-style-type: square;
+    }
+.circleList {
+    list-style-type: circle;
 }
