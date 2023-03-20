@@ -37,20 +37,25 @@
 //     radiusPara.innerText=(`The area of a circle with radius ${radius} is ${results}`)
 //     resultPara.innerText= "No error"
 // }
-const ulist= document.querySelector(".shopping")
-function populatelist(shoppinglistArray){
-    //for each item in the shoppinglistArray, add a list item with its value
-    for (let item of shoppinglistArray)
-    {
-        const li = document.createElement("li")
-        li.textContent = item 
-        ulist.appendChild(li)
-        // console.log(item)
-    }
+// const ulist= document.querySelector(".shopping")
+// function populatelist(shoppinglistArray){
+//     //for each item in the shoppinglistArray, add a list item with its value
+//     for (let item of shoppinglistArray)
+//     {
+//         const li = document.createElement("li")
+//         li.textContent = item 
+//         ulist.appendChild(li)
+//         // console.log(item)
+//     }
+// }
+
+// let myShoppinglist= ['cheese','bread', 'pepper'];
+
+// populatelist(myShoppinglist)
+
+function squareListMaker()
+{
+    ulList.classList.add("squareList")
+    ulList.classList.remove("cicleList")
 }
-
-let myShoppinglist= ['cheese','bread', 'pepper'];
-
-populatelist(myShoppinglist)
-
-
+squareListMaker()
