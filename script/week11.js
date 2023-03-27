@@ -37,25 +37,54 @@
 //     radiusPara.innerText=(`The area of a circle with radius ${radius} is ${results}`)
 //     resultPara.innerText= "No error"
 // }
-// const ulist= document.querySelector(".shopping")
-// function populatelist(shoppinglistArray){
-//     //for each item in the shoppinglistArray, add a list item with its value
-//     for (let item of shoppinglistArray)
-//     {
-//         const li = document.createElement("li")
-//         li.textContent = item 
-//         ulist.appendChild(li)
-//         // console.log(item)
-//     }
-// }
+const ulList= document.querySelector(".shopping")
+function populatelist(shoppinglistArray){
+    //for each item in the shoppinglistArray, add a list item with its value
+    for (let item of shoppinglistArray)
+    {
+        const li = document.createElement("li")
+        li.textContent = item 
+        ulList.appendChild(li)
+        // console.log(item)
+    }
+}
 
-// let myShoppinglist= ['cheese','bread', 'pepper'];
+let myShoppinglist= ['cheese','bread', 'green pepper'];
 
-// populatelist(myShoppinglist)
-
+populatelist(myShoppinglist)
+// const ulList= document.querySelector(".shopping circleList")
 function squareListMaker()
 {
-    ulList.classList.add("squareList")
-    ulList.classList.remove("cicleList")
+    ulList.classList.add("squareList");
+    ulList.classList.remove("cicleList");
 }
 squareListMaker()
+
+function updateImage(){
+    const image=document.querySelector("#shoppingCart");
+    image.setAttribute(
+        "src",
+    "https://cdn-icons-png.flaticon.com/512/263/263142.png"
+    );
+    image.setAttribute("width","50");
+    image.setAttribute("height","50");
+    image.setAttribute("alt","shoppingCart");
+}
+updateImage()
+
+function makeListGreen()
+{
+    //1.find all the li s -> array like structure
+    const listItems=document.querySelectorAll(".shopping")
+    //2.loop through the array
+    for (let item of listItems){
+        let text = item.textContent;
+        if (text.includes("green")) {
+            item.classList.add("greenText");
+        }
+    }
+    //3. find the textContent of each item of the array
+    //4. use .includes() to check if the text contains green
+    //5. update the style of that element to green text
+}
+makeListGreen()
